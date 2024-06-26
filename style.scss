@@ -1,0 +1,128 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+p{
+    margin: 0px;
+    padding: 0px;
+}
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contaner{
+    @include flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(126, 125, 125);
+}
+.light-bg{
+    background-color: rgb(255, 255, 255); 
+}
+.dark-bg{
+    background-color: rgb(0, 0, 0); 
+}
+.light-mood{
+    color: rgb(255, 255, 255);
+}
+.dark-mood{
+    color: rgb(0, 0, 0);
+}
+.calculator{
+    @include flex;
+    flex-direction: column;
+    width: 400px;
+    height: 530px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    .header{
+        width: 380px;
+        height: 45%;
+        direction: ltr;
+        display: flex;
+        flex-direction: column;
+        font-size: 50pt;
+        align-items:flex-end;
+        .histoy-result{
+            height: 50%;
+            font-size: 16pt;
+            color: rgb(192, 190, 190);
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items:flex-end;
+            text-align: end;
+            overflow: hidden;
+            margin-top: 3px;
+        }
+        .top-result{
+            height: 25%;
+        }
+        .result{
+            height: 24%;
+            padding-bottom: 10px;
+            color: rgb(0, 0, 0);
+        }
+    }
+    .keys{
+        border-top: 1px solid rgb(230, 224, 224);
+        width: 380px;
+        height: 55%;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        .mood{
+            position: relative;
+            overflow: hidden;
+            
+        }
+        .dark{
+            position: absolute;
+            right: 30px;
+            bottom: 9px;
+
+        }
+        .light{
+            position: absolute;
+            right: 30px;
+            bottom: 59px;
+
+        }
+        .main-keys{
+            border: none;
+            background-color: inherit;
+            font-size: 20pt;
+            height: 50px;
+        }
+        .main-keys:hover{
+            background-color: rgba(211, 208, 208,0.1);
+        }
+        .sing{
+            color: rgb(247, 125, 10);
+        }
+        .clean{
+            color: rgb(247, 125, 10);
+        }
+        .alert{
+            color: rgb(247, 125, 10);
+        }
+        .cleanAll{
+            color: rgb(247, 125, 10);
+        }
+        .equal{
+            color: rgb(255, 255, 255);
+            background-color: rgb(247, 125, 10);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+        }
+        .equal-box{
+            @include flex;
+        }
+        .equal:hover{
+            background-color: rgba(99, 81, 81, 0.1);
+            color: rgb(247, 125, 10);
+        }
+    }
+}
